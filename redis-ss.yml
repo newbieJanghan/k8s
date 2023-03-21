@@ -16,9 +16,19 @@ spec:
       labels:
         app: redis-cluster
     spec:
+      initContainers:
+      - name: install-redis-cli
+        image: redis
+        command: ["/bin/sh", "-c"]
+        args:
+        - sudo apt-get update && sudo apt-get install -y redis-tools
+        - sleep 3600
+        volumeMounts:
+        - name: data
+          mountPath: /data
       containers:
       - name: redis
-        image: redis:6.2-rc
+        image: redis/redis-stack:latest
         ports:
         - containerPort: 6379
           name: client
