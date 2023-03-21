@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: redis-cluster-init
+spec:
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: redis-cluster-init
+          image: redis/redis-stack:latest
+          command:
+            - sh
+          args:
+            - -c
+            - |
+              redis-cli --cluster create \
+              redis-node-0.redis-node:6973 \
+              redis-node-1.redis-node:6973 \
+              redis-node-2.redis-node:6973 \
+              redis-node-3.redis-node:6973 \
+              redis-node-4.redis-node:6973 \
+              redis-node-5.redis-node:6973 \
+              --cluster-yes --cluster-replicas 1
