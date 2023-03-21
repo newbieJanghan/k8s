@@ -1,13 +1,13 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: redis-cluster-init
+  name: redis-cluster
 spec:
   template:
     spec:
       restartPolicy: OnFailure
       containers:
-        - name: redis-cluster-init
+        - name: redis-cluster
           image: redis/redis-stack:latest
           command:
             - sh
