@@ -12,5 +12,5 @@ spec:
           image: redis
           command: ["/bin/sh", "-c"]
           args:
-            - kubectl exec -it redis-cluster-0 -n redis -- redis-cli --cluster create --cluster-replicas 1 $(kubectl get pods -l app=redis-cluster -n redis -o jsonpath='{range.items[*]}{.status.podIP}:6379 ')
+            - kubectl exec -it redis-cluster-0 -n redis -- redis-cli -a educere --cluster create --cluster-replicas 1 $(kubectl get pods -l app=redis-cluster -n redis -o jsonpath='{range.items[*]}{.status.podIP}:6379 {end}')
   backoffLimit: 4

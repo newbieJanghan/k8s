@@ -17,16 +17,6 @@ spec:
       labels:
         app: redis-cluster
     spec:
-      #   initContainers:
-      #     - name: install-redis-cli
-      #       image: redis
-      #       command: ["/bin/sh", "-c"]
-      #       args:
-      #         - sudo apt-get update && sudo apt-get install -y redis-tools
-      #         - sleep 3600
-      #       volumeMounts:
-      #         - name: data
-      #           mountPath: /data
       containers:
         - name: redis
           image: redis/redis-stack:latest

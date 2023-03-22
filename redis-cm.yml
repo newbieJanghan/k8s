@@ -24,6 +24,7 @@ data:
     cluster-node-timeout 15000
     cluster-config-file /data/nodes.conf
     cluster-migration-barrier 1
+    logfile /data/node.log
     appendonly yes
     requirepass educere
     loadmodule /opt/redis-stack/lib/rejson.so
