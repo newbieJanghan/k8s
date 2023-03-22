@@ -24,6 +24,10 @@ data:
     cluster-node-timeout 15000
     cluster-config-file /data/nodes.conf
     cluster-migration-barrier 1
-    appendonly no
-    save ""
-    protected-mode no
+    appendonly yes
+    requirepass educere
+    loadmodule /opt/redis-stack/lib/rejson.so
+    loadmodule /opt/redis-stack/lib/redisearch.so
+    loadmodule /opt/redis-stack/lib/redisgraph.so
+    loadmodule /opt/redis-stack/lib/redistimeseries.so
+    loadmodule /opt/redis-stack/lib/redisbloom.so
