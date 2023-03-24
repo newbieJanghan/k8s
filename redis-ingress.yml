@@ -7,10 +7,6 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/rewrite-target: "/"
 spec:
-  ports:
-    - name: redis-cluster22
-      port: 6379
-      protocol: TCP
   rules:
     - host: mungtage.site
       http:
@@ -19,47 +15,41 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-0
+                name: redis-cluster-lb
                 port:
-                  number: 6379
-                # host: redis-cluster-0.10.0.0.1
+                  name: 6379
           - path: /1
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-1
+                name: redis-cluster-lb
                 port:
-                  number: 6379
-                # host: redis-cluster-1.10.0.0.1
+                  name: 6379
           - path: /2
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-2
+                name: redis-cluster-lb
                 port:
-                  number: 6379
-                # host: redis-cluster-2.10.0.0.1
+                  name: 6379
           - path: /3
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-3
+                name: redis-cluster-lb
                 port:
-                  number: 6379
-                # host: redis-cluster-3.10.0.0.1
+                  name: 6379
           - path: /4
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-4
+                name: redis-cluster-lb
                 port:
-                  number: 6379
-                # host: redis-cluster-4.10.0.0.1
+                  name: 6379
           - path: /5
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-5
+                name: redis-cluster-lb
                 port:
-                  number: 6379
-                # host: redis-cluster-5.10.0.0.1
+                  name: 6379

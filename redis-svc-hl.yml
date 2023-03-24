@@ -6,6 +6,7 @@ metadata:
   labels:
     app: redis-cluster
 spec:
+  type: ClusterIP
   clusterIP: None
   ports:
     - port: 6379
@@ -14,6 +15,5 @@ spec:
     - port: 16379
       targetPort: 16379
       name: gossip
-  type: ClusterIP
   selector:
     app: redis-cluster
