@@ -5,10 +5,10 @@ metadata:
   namespace: redis
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
-    traefik.ingress.kubernetes.io/router.rule: "Host(`mydomain.com`) && PathPrefix(`/redis`)"
+    traefik.ingress.kubernetes.io/router.rule: "Host(`http://3.36.127.101`) && PathPrefix(`/redis`)"
 spec:
   rules:
-    - host: mydomain.com
+    - host: http://3.36.127.101
       http:
         paths:
           - path: /redis
