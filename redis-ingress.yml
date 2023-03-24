@@ -17,39 +17,39 @@ spec:
               service:
                 name: redis-cluster-lb
                 port:
-                  name: 6379
+                  number: 6379
           - path: /1
             pathType: Prefix
             backend:
               service:
                 name: redis-cluster-lb
                 port:
-                  name: 6379
+                  number: 6379
           - path: /2
             pathType: Prefix
             backend:
               service:
                 name: redis-cluster-lb
                 port:
-                  name: 6379
+                  number: 6379
           - path: /3
             pathType: Prefix
             backend:
               service:
                 name: redis-cluster-lb
                 port:
-                  name: 6379
+                  number: 6379
           - path: /4
             pathType: Prefix
             backend:
               service:
                 name: redis-cluster-lb
                 port:
-                  name: 6379
+                  number: 6379
           - path: /5
             pathType: Prefix
             backend:
               service:
                 name: redis-cluster-lb
                 port:
-                  name: 6379
+                  number: 6379
