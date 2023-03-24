@@ -11,45 +11,51 @@ spec:
     - host: mungtage.site
       http:
         paths:
-          - path: /redis-cluster-0
+          - path: /0
             pathType: Prefix
             backend:
               service:
                 name: redis-cluster-headless
                 port:
                   name: client
-          - path: /redis-cluster-1
+                host: redis-cluster-0.10.0.0.1
+          - path: /1
             pathType: Prefix
             backend:
               service:
                 name: redis-cluster-headless
                 port:
                   name: client
-          - path: /redis-cluster-2
+                host: redis-cluster-1.10.0.0.1
+          - path: /2
             pathType: Prefix
             backend:
               service:
                 name: redis-cluster-headless
                 port:
                   name: client
-          - path: /redis-cluster-3
+                host: redis-cluster-2.10.0.0.1
+          - path: /3
             pathType: Prefix
             backend:
               service:
                 name: redis-cluster-headless
                 port:
                   name: client
-          - path: /redis-cluster-4
+                host: redis-cluster-3.10.0.0.1
+          - path: /4
             pathType: Prefix
             backend:
               service:
                 name: redis-cluster-headless
                 port:
                   name: client
-          - path: /redis-cluster-5
+                host: redis-cluster-4.10.0.0.1
+          - path: /5
             pathType: Prefix
             backend:
               service:
                 name: redis-cluster-headless
                 port:
                   name: client
+                host: redis-cluster-5.10.0.0.1
