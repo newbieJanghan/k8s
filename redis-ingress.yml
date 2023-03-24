@@ -8,7 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: "/"
 spec:
   rules:
-    - host: "3.36.127.101"
+    - host: mungtage.site
       http:
         paths:
           - path: /0
