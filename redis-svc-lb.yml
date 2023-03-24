@@ -7,12 +7,16 @@ metadata:
     app: redis-cluster
 spec:
   type: LoadBalancer
-  ports:
-    - port: 6379
-      targetPort: 6379
-      name: client
-    - port: 16379
-      targetPort: 16379
-      name: gossip
   selector:
     app: redis-cluster
+  ports:
+    - name: client
+      port: 6379
+      targetPort: 6379
+      nodePoret: 7000
+    - name: gossip
+      port: 16379
+      targetPort: 16379
+      nodePoret: 17000
+  publishNotReadyAddresses: true
+  clusterIP: 10.0.0.1
