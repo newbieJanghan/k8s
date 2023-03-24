@@ -7,6 +7,10 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/rewrite-target: "/"
 spec:
+  ports:
+    - name: redis-cluster22
+      port: 6379
+      protocol: TCP
   rules:
     - host: mungtage.site
       http:
