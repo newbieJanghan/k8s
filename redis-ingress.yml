@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: redis-cluster
@@ -12,26 +12,44 @@ spec:
       http:
         paths:
           - path: /0
+            pathType: Prefix
             backend:
-              serviceName: redis-cluster-0
-              servicePort: 6973
+              service:
+                name: redis-cluster-0
+                port:
+                  number: 6973
           - path: /1
+            pathType: Prefix
             backend:
-              serviceName: redis-cluster-0
-              servicePort: 6973
+              service:
+                name: redis-cluster-1
+                port:
+                  number: 6973
           - path: /2
+            pathType: Prefix
             backend:
-              serviceName: redis-cluster-0
-              servicePort: 6973
+              service:
+                name: redis-cluster-2
+                port:
+                  number: 6973
           - path: /3
+            pathType: Prefix
             backend:
-              serviceName: redis-cluster-0
-              servicePort: 6973
+              service:
+                name: redis-cluster-3
+                port:
+                  number: 6973
           - path: /4
+            pathType: Prefix
             backend:
-              serviceName: redis-cluster-0
-              servicePort: 6973
+              service:
+                name: redis-cluster-4
+                port:
+                  number: 6973
           - path: /5
+            pathType: Prefix
             backend:
-              serviceName: redis-cluster-0
-              servicePort: 6973
+              service:
+                name: redis-cluster-5
+                port:
+                  number: 6973
