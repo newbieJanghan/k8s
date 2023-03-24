@@ -8,40 +8,46 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: "/"
 spec:
   rules:
-    - host: 3.36.127.101
+    - host: "3.36.127.101"
       http:
         paths:
           - path: /0
+            pathType: Prefix
             backend:
               service:
                 name: redis-cluster-0
                 port:
                   number: 6973
           - path: /1
+            pathType: Prefix
             backend:
               service:
                 name: redis-cluster-1
                 port:
                   number: 6973
           - path: /2
+            pathType: Prefix
             backend:
               service:
                 name: redis-cluster-2
                 port:
                   number: 6973
           - path: /3
+            pathType: Prefix
             backend:
               service:
                 name: redis-cluster-3
                 port:
                   number: 6973
           - path: /4
+            pathType: Prefix
             backend:
               service:
                 name: redis-cluster-4
                 port:
                   number: 6973
           - path: /5
+            pathType: Prefix
             backend:
               service:
                 name: redis-cluster-5
