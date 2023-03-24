@@ -17,4 +17,4 @@ spec:
       port: 16379
       targetPort: 16379
   publishNotReadyAddresses: true
-  clusterIP: 10.0.0.1
+  clusterIP: 10.43.0.1
