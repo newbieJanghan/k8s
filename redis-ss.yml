@@ -17,6 +17,7 @@ spec:
       labels:
         app: redis-cluster
     spec:
+      hostname: redis-cluster-$(id)
       containers:
         - name: redis
           image: redis/redis-stack:latest
