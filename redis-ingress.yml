@@ -14,41 +14,41 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-0.redis.svc.cluster.local
+                name: redis-cluster-0.redis-cluster-headless.redis.svc.cluster.local
                 port:
                   number: 6379
           - path: /1
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-1.redis.svc.cluster.local
+                name: redis-cluster-1.redis-cluster-headless.redis.svc.cluster.local
                 port:
                   number: 6379
           - path: /2
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-2.redis.svc.cluster.local
+                name: redis-cluster-2.redis-cluster-headless.redis.svc.cluster.local
                 port:
                   number: 6379
           - path: /3
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-3.redis.svc.cluster.local
+                name: redis-cluster-3.redis-cluster-headless.redis.svc.cluster.local
                 port:
                   number: 6379
           - path: /4
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-4.redis.svc.cluster.local
+                name: redis-cluster-4.redis-cluster-headless.redis.svc.cluster.local
                 port:
                   number: 6379
           - path: /5
             pathType: Prefix
             backend:
               service:
-                name: redis-cluster-5.redis.svc.cluster.local
+                name: redis-cluster-5.redis-cluster-headless.redis.svc.cluster.local
                 port:
                   number: 6379
