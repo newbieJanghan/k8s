@@ -6,7 +6,7 @@ metadata:
   labels:
     app: redis-cluster
 spec:
-  serviceName: redis-cluster
+  serviceName: redis-cluster-headless
   podManagementPolicy: Parallel
   replicas: 6
   selector:
@@ -17,7 +17,6 @@ spec:
       labels:
         app: redis-cluster
     spec:
-      hostname: redis-cluster-$(id)
       containers:
         - name: redis
           image: redis/redis-stack:latest
